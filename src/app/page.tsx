@@ -28,12 +28,12 @@ const Accordion = () => {
   ];
 
   return (
-    <div className="w-full max-w-md mx-auto bg-gray-100 p-4 rounded-lg shadow-md">
+    <div className="w-full max-w-md mx-auto bg-gray-400 p-4 rounded-lg shadow-md">
       {items.map((item, index) => (
         <div key={index} className="border-b border-gray-200">
           <h2>
             <button
-              className={`flex justify-between w-full p-4 text-left bg-white rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              className={`flex justify-between w-full p-4 text-left bg-gray-300 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-700 ${
                 openIndex === index ? 'font-bold' : ''
               }`}
               onClick={() => toggleAccordion(index)}
@@ -53,7 +53,7 @@ const Accordion = () => {
             </button>
           </h2>
           {openIndex === index && (
-            <div className="p-4 text-gray-700 bg-gray-50 rounded-b-lg">
+            <div className="p-4 text-gray-700 bg-gray-100 rounded-b-lg">
               <strong>{item.answer}</strong>
             </div>
           )}
@@ -67,7 +67,8 @@ const Accordion = () => {
 export default function HomePage() {
   return (
     <div>
-      <h1 className="text-2xl font-bold text-center my-6">Welcome to Our Website</h1>
+      <h1 className="text-2xl font-bold text-center my-6 text-orange-400">Welcome to Health Website</h1>
+      <h1 className="text-2xl font-bold text-center my-6 text-balance">Here are some Faq</h1>
       <Accordion />
     </div>
   );
