@@ -80,7 +80,8 @@ const SocialIcons = ({ Icons }) => {
         }
 
         return IconComponent ? (
-          <Link href={icon.link} key={icon.name} aria-label={Link to ${icon.name}}>
+          <Link href={icon.link} key={icon.name} aria-label={`Link to ${icon.name}`}
+>
             <span
               className="p-2 cursor-pointer inline-flex items-center rounded-full bg-gray-700 mx-1.5 text-xl hover:text-gray-100 hover:bg-teal-500 duration-300"
             >
