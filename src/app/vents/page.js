@@ -15,11 +15,13 @@ const HealthTips = () => {
   ];
 
   return (
-    <div className="health-tips">
-      <h2 className="text-2xl font-semibold mb-4">Health Tips for Patients</h2>
+    <div className="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+      <h2 className="text-3xl font-bold mb-6 text-teal-600 border-b-2 border-teal-200 pb-2 text-center">
+      Events & Workshops for Healthone
+      </h2>
       <ul className="list-disc list-inside">
         {tips.map((tip, index) => (
-          <li key={index} className="mb-2 text-gray-700">
+          <li key={index} className="mb-2 text-gray-700 text-lg leading-relaxed">
             {tip}
           </li>
         ))}

@@ -1,4 +1,4 @@
-// src/app/components/PatientStories.js
+import React from 'react';
 
 const PatientStories = () => {
     const stories = [
@@ -22,20 +22,19 @@ const PatientStories = () => {
   
     return (
       <div className="bg-gray-100 p-6 rounded-lg shadow-lg mb-6">
-        <h2 className="text-2xl font-semibold mb-4 text-teal-600 border-b-2 border-teal-200  align-baseline pb-2">
+        <h2 className="text-3xl font-semibold mb-4 text-teal-600 border-b-2 border-teal-200 pb-2">
           Patient Stories
         </h2>
-        <div>
+        <div className="space-y-4">
           {stories.map((story, index) => (
-            <div key={index} className="mb-4 p-4 bg-white rounded-md shadow-sm">
+            <div key={index} className="p-4 bg-white rounded-md shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-medium text-gray-800 mb-2">{story.title}</h3>
-              <p className="text-gray-600">{story.description}</p>
+              <p className="text-gray-700 leading-relaxed">{story.description}</p>
             </div>
           ))}
         </div>
       </div>
     );
-  };
-  
-  export default PatientStories;
-  
+};
+
+export default PatientStories;

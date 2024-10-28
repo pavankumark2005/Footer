@@ -1,4 +1,5 @@
-// components/HealthcareNews.js
+import React from 'react';
+
 const HealthcareNews = () => {
     const newsArticles = [
         {
@@ -15,67 +16,31 @@ const HealthcareNews = () => {
             title: "Health Fair Scheduled for November",
             date: "October 5, 2024",
             content: "Join us for our annual health fair featuring free screenings, wellness workshops, and more!"
+        },
+        {
+            title: "New Vaccination Drive Launched",
+            date: "October 20, 2024",
+            content: "We are launching a new vaccination drive to increase immunization rates in our community. Free vaccines will be available every Saturday at our clinic."
+        },
+        {
+            title: "Partnership with Local Fitness Center",
+            date: "October 25, 2024",
+            content: "We have partnered with a local fitness center to offer discounted memberships for our patients. Stay active and healthy with our special rates."
         }
     ];
 
-    const containerStyle = {
-        maxWidth: '800px',
-        margin: '0 auto',
-        padding: '20px',
-        fontFamily: 'Arial, sans-serif',
-        textcolor: 'red',
-        fontSize:'15px',
-    };
-
-    const headingStyle = {
-        textAlign: 'center',
-        color: '#2c3e50',
-        fontsize: '20px'
-    };
-
-    const newsListStyle = {
-        marginTop: '20px',
-    };
-
-    const articleStyle = {
-        border: '1px solid #ddd',
-        borderRadius: '5px',
-        padding: '15px',
-        marginBottom: '15px',
-        transition: 'box-shadow 0.3s',
-    };
-
-    const articleHoverStyle = {
-        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
-    };
-
-    const articleTitleStyle = {
-        color: '#2980b9',
-        margin: '0 0 10px',
-    };
-
-    const articleDateStyle = {
-        color: '#7f8c8d',
-        fontSize: '0.9em',
-        margin: '0 0 10px',
-    };
-
-    const articleContentStyle = {
-        lineHeight: '1.6',
-    };
-
     return (
-        <div style={containerStyle}>
-            <h1 style={headingStyle}>Healthcare Center News</h1>
-            <div style={newsListStyle}>
+        <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-8">
+            <h1 className="text-3xl font-bold text-center text-purple-600 mb-6">Healthcare Center News</h1>
+            <div className="space-y-4">
                 {newsArticles.map((article, index) => (
                     <div 
                         key={index} 
-                        style={{ ...articleStyle, '&:hover': articleHoverStyle }}
+                        className="border border-gray-300 rounded-lg p-4 transition-shadow duration-300 hover:shadow-lg"
                     >
-                        <h2 style={articleTitleStyle}>{article.title}</h2>
-                        <p style={articleDateStyle}>{article.date}</p>
-                        <p style={articleContentStyle}>{article.content}</p>
+                        <h2 className="text-xl font-semibold text-teal-600 mb-2">{article.title}</h2>
+                        <p className="text-gray-500 text-sm mb-2">{article.date}</p>
+                        <p className="text-gray-700 leading-relaxed">{article.content}</p>
                     </div>
                 ))}
             </div>

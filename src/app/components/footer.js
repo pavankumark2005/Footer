@@ -2,7 +2,7 @@ import React from "react";
 import { IoLogoFacebook, IoLogoTwitter, IoLogoInstagram } from "react-icons/io";
 import Link from "next/link";
 
-// Define your icons data
+
 const ICONS = [
   { name: "logo-facebook", link: "https://www.facebook.com" },
   { name: "logo-twitter", link: "https://www.twitter.com" },
@@ -10,35 +10,35 @@ const ICONS = [
 ];
 
 const RESOURCES = [
-  { name: "Health Tips", link: "/health-tips" }, // Ensure the route matches your file structure
+  { name: "Health Tips", link: "/health-tips" }, 
   { name: "Patient Stories", link: "/patient-stories" },
   { name: "Blog", link: "/blog" },
   { name: "FAQs", link: "/faq" },
-  { name: "Events & Workshops", link: "/vents" }, // Use a valid URL format
+  { name: "Events & Workshops", link: "/vents" }, 
 ];
 
 const ABOUT = [
   { name: "Our Mission", link: "/our-mission" },
   { name: "Team", link: "/team" },
   { name: "News", link: "/news" },
-  { name: "Community Outreach", link: "/community-outreach" }, // Ensure correct route
+  { name: "Community Outreach", link: "/community-outreach" }, 
 ];
 
 const SUPPORT = [
-  { name: "Patient Support", link: "/patient-support" }, // Ensure correct route
+  { name: "Patient Support", link: "/patient-support" }, 
   { name: "Insurance Information", link: "/insurance-information" },
   { name: "Feedback", link: "/feedback" },
   { name: "Contact Us", link: "/contect-us" },
 ];
 
-// Item component to display links
+
 const Item = ({ Links, title }) => {
   return (
     <ul>
       <h1 className="mb-1 font-semibold">{title}</h1>
       {Links.map((link) => (
         <li key={link.name}>
-          <Link href={link.link} className="text-gray-400 hover:text-teal-400 duration-300 text-sm cursor-pointer leading-6">
+          <Link href={link.link} className="text-gray-300 hover:text-teal-400 duration-300 text-sm cursor-pointer leading-6">
             {link.name}
           </Link>
         </li>
@@ -47,7 +47,7 @@ const Item = ({ Links, title }) => {
   );
 };
 
-// SocialIcons component to display social media icons
+
 const SocialIcons = ({ Icons }) => {
   return (
     <div className="text-teal-500">
@@ -82,7 +82,7 @@ const SocialIcons = ({ Icons }) => {
   );
 };
 
-// Footer component that brings everything together
+
 const Footer = () => {
   return (
     <div className="bg-gray-900 text-white">
